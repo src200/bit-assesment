@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://harmony-docs.bit.dev/workspace/configurations
- **/{
+ **/ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -27,7 +27,7 @@
     /**
      * default scope for all components in workspace.
      **/
-    "defaultScope": "company.scope"
+    "defaultScope": "src200.bit-assesment"
   },
   /**
    * main configuration for component dependency resolution.
@@ -71,9 +71,9 @@
   "teambit.workspace/variants": {
     "{ui/**}, {pages/**}": {
       // uses the custom env
-      "company.scope/envs/my-react": {}
+      "company.scope/envs/my-react": {},
       // uncomment the line below if you remove the custom env and remove the line above
-      // "teambit.react/react": {},
+      "teambit.react/react": {}
     },
     "{themes/**}": {
       "teambit.react/react": {}
