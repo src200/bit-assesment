@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+import styles from './overlay.module.scss';
 
 export type OverlayProps = {
-  /**
-   * a text to be rendered in the component.
-   */
-  text: string
+  active: boolean;
+  onClick?: () => void;
+  children?: ReactNode;
+  width?: string;
+  height?: string;
 };
 
-export function Overlay({ text }: OverlayProps) {
+export function Overlay({ active, children, onClick, width = '100vw', height = '100vh' }: OverlayProps) {
   return (
-    <div>
-      {text}
-    </div>
+    active && (
+      <div className={styles.overlay} onClick={onClick} style={{ width: width, height: height }}>
+        {children}
+      </div>
+    )
   );
 }

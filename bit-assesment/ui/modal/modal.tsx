@@ -1,16 +1,31 @@
 import React from 'react';
+import { Overlay } from '@src200/bit-assesment.ui.overlay';
+import Header from './header';
+import Content from './content';
+import Actions from './actions';
+import styles from './modal.module.scss';
 
 export type ModalProps = {
-  /**
-   * a text to be rendered in the component.
-   */
-  text: string
+  /** flag to disaply the modal */
+  isOpen: boolean;
+  /** method to close the modal */
+  onClose: () => void;
+  /** content of the modal */
+  children: React.ReactNode;
 };
 
-export function Modal({ text }: ModalProps) {
+function Modal({ isOpen, onClose, children, ...props }: ModalProps) {
   return (
-    <div>
-      {text}
-    </div>
+    <Overlay active={isOpen} onClick={onClose}>
+      <div aria-modal role="dialog" className={styles.modal} {...props}>
+        {children}
+      </div>
+    </Overlay>
   );
 }
+
+export default Object.assign(Modal, {
+  Header,
+  Content,
+  Actions,
+});
