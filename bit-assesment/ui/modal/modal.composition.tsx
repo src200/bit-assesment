@@ -9,9 +9,11 @@ export const BasicModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Modal.Header title="Modal Title" />
+        <Modal.Header title="Basic Modal" />
         <Modal.Content>
           <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequatur, quisquam.
           </p>

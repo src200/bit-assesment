@@ -8,7 +8,7 @@ export type HeaderProps = {
 export default function Header({ title }: HeaderProps) {
     return (
         <div className={styles.modalHeader}>
-            <h4>{title}</h4>
+            <h3>{title}</h3>
         </div>
     );
 }
