@@ -39,17 +39,16 @@ function Modal({
 }: ModalProps) {
   const resolveClasses = useCallback(
     () =>
-      classNames(styles.modal, {
+      classNames(styles.modal, `${className}`, {
         [styles.modalSmall]: size === 'small',
         [styles.modalMedium]: size === 'medium',
         [styles.modalLarge]: size === 'large',
-        [styles.modaFullScreen]: fullscreen,
-        className
+        [styles.modaFullScreen]: fullscreen
       }), [className, size, fullscreen],
   );
 
   return (
-    <ModalContext.Provider value={{ showCloseIcon, onClose }}>
+    <ModalContext.Provider value={{ isOpen, showCloseIcon, onClose }}>
       <Overlay active={isOpen} onClick={closeOnOutsideClick ? onClose : null}>
         <div role="dialog" className={resolveClasses()} {...props}>
           {children}
