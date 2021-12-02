@@ -9,33 +9,21 @@
  */
 
 {
-    "envs/my-react": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "demo/envs/my-react"
-    },
-    "pages/welcome": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "demo/pages/welcome"
-    },
     "ui/button": {
-        "scope": "",
-        "version": "",
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/button"
     },
     "ui/modal": {
-        "scope": "",
-        "version": "",
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/modal"
     },
     "ui/overlay": {
-        "scope": "",
-        "version": "",
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/overlay"
     },
