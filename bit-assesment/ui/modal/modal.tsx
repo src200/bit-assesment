@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
-import { Overlay } from '@src200/bit-assesment.ui.overlay';
+import { Overlay as ModalBackDrop } from '@src200/bit-assesment.ui.overlay';
 import Header from './header';
 import Content from './content';
 import Actions from './actions';
@@ -49,11 +49,11 @@ function Modal({
 
   return (
     <ModalContext.Provider value={{ isOpen, showCloseIcon, onClose }}>
-      <Overlay active={isOpen} onClick={closeOnOutsideClick ? onClose : null}>
+      <ModalBackDrop active={isOpen} onClick={closeOnOutsideClick ? onClose : null}>
         <div role="dialog" className={resolveClasses()} {...props}>
           {children}
         </div>
-      </Overlay>
+      </ModalBackDrop>
     </ModalContext.Provider>
   );
 }
