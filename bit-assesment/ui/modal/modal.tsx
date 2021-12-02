@@ -4,6 +4,7 @@ import { Overlay } from '@src200/bit-assesment.ui.overlay';
 import Header from './header';
 import Content from './content';
 import Actions from './actions';
+import { ModalContext } from './context';
 import styles from './modal.module.scss';
 
 export type ModalProps = {
@@ -12,7 +13,7 @@ export type ModalProps = {
   /** method to close the modal */
   onClose: () => void;
   /** children to render inside the modal */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** modal class */
   className?: string;
   /** modal sizes */
@@ -21,6 +22,8 @@ export type ModalProps = {
   closeOnOutsideClick?: boolean;
   /** fullscreen modal */
   fullscreen?: boolean;
+  /** show close icon */
+  showCloseIcon?: boolean
 };
 
 function Modal({
@@ -31,6 +34,7 @@ function Modal({
   size = 'medium',
   closeOnOutsideClick = false,
   fullscreen = false,
+  showCloseIcon = true,
   ...props
 }: ModalProps) {
   const resolveClasses = useCallback(
@@ -45,11 +49,13 @@ function Modal({
   );
 
   return (
-    <Overlay active={isOpen} onClick={closeOnOutsideClick ? onClose : null}>
-      <div role="dialog" className={resolveClasses()} {...props}>
-        {children}
-      </div>
-    </Overlay>
+    <ModalContext.Provider value={{ showCloseIcon, onClose }}>
+      <Overlay active={isOpen} onClick={closeOnOutsideClick ? onClose : null}>
+        <div role="dialog" className={resolveClasses()} {...props}>
+          {children}
+        </div>
+      </Overlay>
+    </ModalContext.Provider>
   );
 }
 
