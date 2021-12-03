@@ -43,14 +43,14 @@ function Modal({
         [styles.modalSmall]: size === 'small',
         [styles.modalMedium]: size === 'medium',
         [styles.modalLarge]: size === 'large',
-        [styles.modaFullScreen]: fullscreen
+        [styles.modaFullScreen]: fullscreen,
       }), [className, size, fullscreen],
   );
 
   return (
     <ModalContext.Provider value={{ isOpen, showCloseIcon, onClose }}>
       <ModalBackDrop active={isOpen} onClick={closeOnOutsideClick ? onClose : null}>
-        <div role="dialog" className={resolveClasses()} {...props}>
+        <div role="dialog" className={resolveClasses()} onClick={e => closeOnOutsideClick && e.stopPropagation()} {...props}>
           {children}
         </div>
       </ModalBackDrop>
