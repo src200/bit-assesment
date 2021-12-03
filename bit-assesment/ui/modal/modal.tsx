@@ -1,9 +1,6 @@
-import React, { useCallback } from 'react';
+import React, { ReactNode, useCallback } from 'react';
 import classNames from 'classnames';
 import { Overlay as ModalBackDrop } from '@src200/bit-assesment.ui.overlay';
-import Header from './header';
-import Content from './content';
-import Actions from './actions';
 import { ModalContext } from './context';
 import styles from './modal.module.scss';
 
@@ -13,7 +10,7 @@ export type ModalProps = {
   /** method to close the modal */
   onClose: () => void;
   /** children to render inside the modal */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /** modal class */
   className?: string;
   /** modal sizes */
@@ -23,20 +20,10 @@ export type ModalProps = {
   /** fullscreen modal */
   fullscreen?: boolean;
   /** show close icon */
-  showCloseIcon?: boolean
+  showCloseIcon?: boolean;
 };
 
-function Modal({
-  isOpen,
-  onClose,
-  children,
-  className,
-  size = 'medium',
-  closeOnOutsideClick = false,
-  fullscreen = false,
-  showCloseIcon = true,
-  ...props
-}: ModalProps) {
+export function Modal({ isOpen, onClose, children, className, size = 'medium', closeOnOutsideClick = false, fullscreen = false, showCloseIcon = true, ...props }: ModalProps) {
   const resolveClasses = useCallback(
     () =>
       classNames(styles.modal, `${className}`, {
@@ -57,9 +44,3 @@ function Modal({
     </ModalContext.Provider>
   );
 }
-
-export default Object.assign(Modal, {
-  Header,
-  Content,
-  Actions,
-});

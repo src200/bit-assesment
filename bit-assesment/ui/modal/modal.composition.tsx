@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from './modal';
+import Modal from '.';
 import { Button } from '@src200/bit-assesment.ui.button';
 import styles from './modal.module.scss';
 
