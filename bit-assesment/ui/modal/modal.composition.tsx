@@ -111,7 +111,7 @@ export const NoCloseIconModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} showCloseIcon={false}>
-        <Modal.Header title="No Close Button" />
+        <Modal.Header title="No Close Icon Modal" />
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -186,9 +186,7 @@ export const EmptyModal = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOutsideClick>
-        <h4>Empty Modal</h4>
-      </Modal>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOutsideClick />
     </>
   );
 }

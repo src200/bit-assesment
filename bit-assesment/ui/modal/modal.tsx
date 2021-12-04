@@ -30,7 +30,7 @@ export function Modal({ isOpen, onClose, children, className, size = 'medium', c
         [styles.modalSmall]: size === 'small',
         [styles.modalMedium]: size === 'medium',
         [styles.modalLarge]: size === 'large',
-        [styles.modaFullScreen]: fullscreen,
+        [styles.modalFullScreen]: fullscreen,
       }), [className, size, fullscreen],
   );
 
