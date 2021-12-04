@@ -17,7 +17,7 @@
     },
     "ui/modal": {
         "scope": "src200.bit-assesment",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/modal"
     },
