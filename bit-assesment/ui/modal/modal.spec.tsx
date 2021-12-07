@@ -42,71 +42,71 @@ describe('BasicModal', () => {
 
 describe('CloseModalOnOutsideClick', () => {
   test('close modal on outside click', () => {
-    const { getByText, container, queryByText } = render(<CloseModalOnOutsideClick />);
+    const { getByText, queryByText } = render(<CloseModalOnOutsideClick />);
     fireEvent.click(getByText('Open Modal'));
     expect(queryByText('Close on Outside Click')).toBeInTheDocument();
-    fireEvent.click(container.querySelector('.overlay'));
+    fireEvent.click(document.querySelector('.overlay'));
     expect(queryByText('Close on Outside Click')).not.toBeInTheDocument();
   });
 });
 
 describe('SmallModal', () => {
   test('render small modal', () => {
-    const { getByText, container } = render(<SmallModal />);
+    const { getByText } = render(<SmallModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Small Modal')).toBeInTheDocument();
-    expect(container.querySelector('.modalSmall')).toBeInTheDocument();
+    expect(document.querySelector('.modalSmall')).toBeInTheDocument();
   });
 });
 
 describe('LargeModal', () => {
   test('render large modal', () => {
-    const { getByText, container } = render(<LargeModal />);
+    const { getByText } = render(<LargeModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Large Modal')).toBeInTheDocument();
-    expect(container.querySelector('.modalLarge')).toBeInTheDocument();
+    expect(document.querySelector('.modalLarge')).toBeInTheDocument();
   });
 });
 
 describe('NoCloseIconModal', () => {
   test('render modal without close icon', () => {
-    const { getByText, container } = render(<NoCloseIconModal />);
+    const { getByText } = render(<NoCloseIconModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('No Close Icon Modal')).toBeInTheDocument();
-    expect(container.querySelector('.withIcon')).not.toBeInTheDocument();
+    expect(document.querySelector('.withIcon')).not.toBeInTheDocument();
   });
 });
 
 describe('FullScreenModal', () => {
   test('render full screen modal', () => {
-    const { getByText, container } = render(<FullScreenModal />);
+    const { getByText } = render(<FullScreenModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Full Screen Modal')).toBeInTheDocument();
-    expect(container.querySelector('.modalFullScreen')).toBeInTheDocument();
+    expect(document.querySelector('.modalFullScreen')).toBeInTheDocument();
   });
 });
 
 describe('FloatingSidebarModal', () => {
   test('render floating sidebar modal', () => {
-    const { getByText, container } = render(<FloatingSidebarModal />);
+    const { getByText } = render(<FloatingSidebarModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Floating Sidebar Modal')).toBeInTheDocument();
-    expect(container.querySelector('.modalFullScreen')).toBeInTheDocument();
-    expect(container.querySelector('.floatingSideBar')).toBeInTheDocument();
+    expect(document.querySelector('.modalFullScreen')).toBeInTheDocument();
+    expect(document.querySelector('.floatingSideBar')).toBeInTheDocument();
   });
 });
 
 describe('EmptyModal', () => {
   test('render empty modal', () => {
-    const { getByText, container } = render(<EmptyModal />);
+    const { getByText } = render(<EmptyModal />);
     fireEvent.click(getByText('Open Modal'));
-    expect(container.querySelector('.modal').firstChild).toBeNull();
+    expect(document.querySelector('.modal').firstChild).toBeNull();
   });
 });
 
 describe('ConfirmationModal', () => {
   test('render confirmation modal', () => {
-    const { getByText, container } = render(<ConfirmationModal />);
+    const { getByText } = render(<ConfirmationModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Confirmation Modal')).toBeInTheDocument();
     expect(getByText('Confirm')).toBeInTheDocument();
