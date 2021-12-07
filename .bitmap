@@ -11,19 +11,19 @@
 {
     "ui/button": {
         "scope": "src200.bit-assesment",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/button"
     },
     "ui/modal": {
         "scope": "src200.bit-assesment",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/modal"
     },
     "ui/overlay": {
         "scope": "src200.bit-assesment",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/overlay"
     },
