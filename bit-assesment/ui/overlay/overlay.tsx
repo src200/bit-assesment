@@ -40,7 +40,7 @@ export function Overlay({
   if (!active) return null;
 
   return createPortal(
-    <div className={resolveClasses} onClick={onClick} style={{ width: width, height: height }}>
+    <div id="portal" className={resolveClasses} onClick={onClick} style={{ width: width, height: height }}>
       {children}
     </div>,
     targetElement
