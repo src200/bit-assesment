@@ -1,12 +1,8 @@
 .modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: drop 0.3s ease-in-out;
     overflow: hidden;
     overflow-y: auto;
     .modalHeader {
@@ -37,30 +33,30 @@
         padding: 15px;
     }
 }
-.modalSmall {
+.modal-small {
     width: 100%;
     max-width: 400px;
     max-height: 300px;
 }
-.modalSmall .modalContent {
+.modal-small .modalContent {
     max-height: 200px;
     overflow-y: auto;
 }
-.modalMedium {
+.modal-medium {
     width: 100%;
     max-width: 600px;
     max-height: 500px;
 }
-.modalMedium .modalContent {
+.modal-medium .modalContent {
     max-height: 300px;
     overflow-y: auto;
 }
-.modalLarge {
+.modal-large {
     width: 100%;
     max-width: 800px;
     max-height: 800px;
 }
-.modalLarge .modalContent {
+.modal-large .modalContent {
     max-height: 400px;
     overflow-y: auto;
 }
@@ -81,6 +77,29 @@
 .floatingSideBar {
     width: 40%;
     animation: slide 0.4s;
+}
+.modal-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: drop 0.3s ease-in-out;
+}
+.modal-top-left {
+    transition: opacity .15s linear;
+    top: 10px;
+    left: 10px;
+}
+.modal-top-right {
+    top: 10px;
+    right: 10px;
+}
+.modal-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+.modal-bottom-right {
+    bottom: 10px;
+    right: 10px;
 }
 
 @keyframes drop {

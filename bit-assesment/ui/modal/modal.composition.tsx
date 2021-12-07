@@ -10,7 +10,7 @@ export const BasicModal = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} position="top-left">
         <Modal.Header title="Basic Modal" />
         <Modal.Content>
           <p>
@@ -210,6 +210,131 @@ export const ConfirmationModal = () => {
         </Modal.Content>
         <Modal.Actions>
           <Button primary onClick={() => setIsOpen(false)}>Confirm</Button>
+        </Modal.Actions>
+      </Modal>
+    </>
+  );
+}
+
+// Modal with no backdrop
+export const NoBackdropModal = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} noBackdrop>
+        <Modal.Header title="No Backdrop Modal" />
+        <Modal.Content>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Modal.Actions>
+      </Modal>
+    </>
+  );
+}
+
+// Modal positioned at top left
+export const TopLeftModal = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="top-left">
+        <Modal.Header title="Top Left Modal" />
+        <Modal.Content>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Modal.Actions>
+      </Modal>
+    </>
+  );
+}
+
+// Modal positioned at top right
+export const TopRightModal = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="top-right">
+        <Modal.Header title="Top Right Modal" />
+        <Modal.Content>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Modal.Actions>
+      </Modal>
+    </>
+  );
+}
+
+// Modal positioned at bottom left
+export const BottomLeftModal = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="bottom-left">
+        <Modal.Header title="Bottom Left Modal" />
+        <Modal.Content>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
+        </Modal.Actions>
+      </Modal>
+    </>
+  );
+}
+
+// Modal positioned at bottom right
+export const BottomRightModal = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="bottom-right">
+        <Modal.Header title="Bottom Right Modal" />
+        <Modal.Content>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, quisquam.
+          </p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button onClick={() => setIsOpen(false)}>Close</Button>
         </Modal.Actions>
       </Modal>
     </>

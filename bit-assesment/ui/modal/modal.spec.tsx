@@ -9,7 +9,12 @@ import {
   FullScreenModal,
   FloatingSidebarModal,
   EmptyModal,
-  ConfirmationModal
+  ConfirmationModal,
+  NoBackdropModal,
+  TopLeftModal,
+  TopRightModal,
+  BottomLeftModal,
+  BottomRightModal,
 } from './modal.composition';
 
 
@@ -55,7 +60,7 @@ describe('SmallModal', () => {
     const { getByText } = render(<SmallModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Small Modal')).toBeInTheDocument();
-    expect(document.querySelector('.modalSmall')).toBeInTheDocument();
+    expect(document.querySelector('.modal-small')).toBeInTheDocument();
   });
 });
 
@@ -64,7 +69,7 @@ describe('LargeModal', () => {
     const { getByText } = render(<LargeModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Large Modal')).toBeInTheDocument();
-    expect(document.querySelector('.modalLarge')).toBeInTheDocument();
+    expect(document.querySelector('.modal-large')).toBeInTheDocument();
   });
 });
 
@@ -110,5 +115,50 @@ describe('ConfirmationModal', () => {
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('Confirmation Modal')).toBeInTheDocument();
     expect(getByText('Confirm')).toBeInTheDocument();
+  });
+});
+
+describe('NoBackDropModal', () => {
+  test('render no backdrop modal', () => {
+    const { getByText } = render(<NoBackdropModal />);
+    fireEvent.click(getByText('Open Modal'));
+    expect(getByText('No Backdrop Modal')).toBeInTheDocument();
+    expect(document.querySelector('.noOverlay')).toBeInTheDocument();
+  });
+});
+
+describe('TopLeftModal', () => {
+  test('render top left modal', () => {
+    const { getByText } = render(<TopLeftModal />);
+    fireEvent.click(getByText('Open Modal'));
+    expect(getByText('Top Left Modal')).toBeInTheDocument();
+    expect(document.querySelector('.modal-top-left')).toBeInTheDocument();
+  });
+});
+
+describe('TopRightModal', () => {
+  test('render top right modal', () => {
+    const { getByText } = render(<TopRightModal />);
+    fireEvent.click(getByText('Open Modal'));
+    expect(getByText('Top Right Modal')).toBeInTheDocument();
+    expect(document.querySelector('.modal-top-right')).toBeInTheDocument();
+  });
+});
+
+describe('BottomLeftModal', () => {
+  test('render bottom left modal', () => {
+    const { getByText } = render(<BottomLeftModal />);
+    fireEvent.click(getByText('Open Modal'));
+    expect(getByText('Bottom Left Modal')).toBeInTheDocument();
+    expect(document.querySelector('.modal-bottom-left')).toBeInTheDocument();
+  });
+});
+
+describe('BottomRightModal', () => {
+  test('render bottom right modal', () => {
+    const { getByText } = render(<BottomRightModal />);
+    fireEvent.click(getByText('Open Modal'));
+    expect(getByText('Bottom Right Modal')).toBeInTheDocument();
+    expect(document.querySelector('.modal-bottom-right')).toBeInTheDocument();
   });
 });

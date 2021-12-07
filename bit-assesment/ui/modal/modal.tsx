@@ -27,6 +27,8 @@ export type ModalProps = {
   noBackdrop?: boolean;
   /** render modal into a traget HTMLElement */
   targetElement?: HTMLElement;
+  /** modal position */
+  position?: 'center' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 };
 
 export function Modal({
@@ -41,16 +43,15 @@ export function Modal({
   showCloseIcon = true,
   noBackdrop = false,
   targetElement,
+  position = 'center',
   ...props
 }: ModalProps) {
-  const resolveClasses = () =>
-    classNames(styles.modal, {
-      [className]: className,
-      [styles.modalSmall]: size === 'small',
-      [styles.modalMedium]: size === 'medium',
-      [styles.modalLarge]: size === 'large',
-      [styles.modalFullScreen]: fullscreen,
-    });
+  const resolveClasses = classNames(styles.modal, {
+    [className]: className,
+    [styles[`modal-${size}`]]: size,
+    [styles[`modal-${position}`]]: position,
+    [styles.modalFullScreen]: fullscreen
+  });
 
   return (
     <ModalContext.Provider value={{ isOpen, showCloseIcon, onClose }}>
@@ -60,7 +61,7 @@ export function Modal({
         customOverlayClass={customBackdropClassName}
         noOverlay={noBackdrop}
         targetElement={targetElement}>
-        <div role="dialog" className={resolveClasses()} onClick={e => closeOnOutsideClick && e.stopPropagation()} {...props}>
+        <div role="dialog" className={resolveClasses} onClick={e => closeOnOutsideClick && e.stopPropagation()} {...props}>
           {children}
         </div>
       </ModalBackDrop>
