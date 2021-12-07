@@ -73,7 +73,7 @@ describe('NoCloseIconModal', () => {
     const { getByText, container } = render(<NoCloseIconModal />);
     fireEvent.click(getByText('Open Modal'));
     expect(getByText('No Close Icon Modal')).toBeInTheDocument();
-    expect(container.querySelector('.closeBtn')).not.toBeInTheDocument();
+    expect(container.querySelector('.withIcon')).not.toBeInTheDocument();
   });
 });
 
