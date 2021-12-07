@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { BasicOverlay, ToggleOverlay } from './overlay.composition';
+import { BasicOverlay, ToggleOverlay, NoOverlay } from './overlay.composition';
 
 test('should render overlay', () => {
   const { getByText, container } = render(<BasicOverlay />);
@@ -14,4 +14,10 @@ test('should toggle overlay', () => {
   expect(container.querySelector('.overlay')).toBeInTheDocument();
   fireEvent.click(container.querySelector('.overlay'));
   expect(container.querySelector('.overlay')).not.toBeInTheDocument();
+});
+
+test('should render without any overlay', () => {
+  const { getByText, container } = render(<ToggleOverlay />);
+  fireEvent.click(getByText('No Overlay'));
+  expect(container.querySelector('.noOverlay')).toBeInTheDocument();
 });

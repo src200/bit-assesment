@@ -31,3 +31,13 @@ export const SidebarOverlay = () => {
     </>
   );
 }
+
+export const NoOverlay = () => {
+  const [toggle, setToggle] = useState<boolean>(false);
+  return (
+    <>
+      <Button onClick={() => setToggle(true)}>No Overlay</Button>
+      <Overlay active={toggle} onClick={() => setToggle(false)} noOverlay={true} />
+    </>
+  );
+}
