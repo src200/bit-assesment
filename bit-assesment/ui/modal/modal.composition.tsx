@@ -10,7 +10,7 @@ export const BasicModal = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} position="top-left">
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Modal.Header title="Basic Modal" />
         <Modal.Content>
           <p>
