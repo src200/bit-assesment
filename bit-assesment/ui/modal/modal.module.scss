@@ -5,33 +5,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     overflow-y: auto;
-    .modalHeader {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-        .closeBtn {
-            cursor: pointer;
-            border: none;
-            background: none;
-            color: #ccc;
-            &:hover {
-                color: #000;
-            }
-        }
-    }
-    .modalContent {
-        padding: 15px;
-        overflow-y: auto;
-    }
-    .modalActions {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        border-top: 1px solid #ccc;
-        padding: 15px;
-    }
 }
 .modal-small {
     width: 100%;
