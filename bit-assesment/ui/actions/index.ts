@@ -1,2 +1,2 @@
-export { Actions as default } from './actions';
+export { Actions } from './actions';
 export type { ActionsProps } from './actions';

@@ -1,2 +1,2 @@
-export { Content as default } from './content';
+export { Content } from './content';
 export type { ContentProps } from './content';

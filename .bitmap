@@ -9,9 +9,15 @@
  */
 
 {
+    "hooks/context": {
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "bit-assesment/hooks/context"
+    },
     "ui/actions": {
-        "scope": "",
-        "version": "",
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/actions"
     },
@@ -22,20 +28,20 @@
         "rootDir": "bit-assesment/ui/button"
     },
     "ui/content": {
-        "scope": "",
-        "version": "",
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/content"
     },
     "ui/header": {
-        "scope": "",
-        "version": "",
+        "scope": "src200.bit-assesment",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/header"
     },
     "ui/modal": {
         "scope": "src200.bit-assesment",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "bit-assesment/ui/modal"
     },

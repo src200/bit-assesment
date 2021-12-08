@@ -1,6 +1,6 @@
 ---
 description: 'A Content component.'
-labels: ['label1', 'label2', 'label3']
+labels: ['react', 'modal', 'content']
 ---
 
 import { Content } from './content';
@@ -11,12 +11,12 @@ A basic div that renders some text
 
 ### Component usage
 ```js
-<Content text="hello from Content" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<Content text="hello from Content" />
+<Content>
+    <h1>Hello World</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
+        nisi euismod, porttitor nisl eu, tincidunt nisl. Nullam euismod
+        dignissim nisi, eu aliquam eros.
+    </p>
+</Content>
 ```

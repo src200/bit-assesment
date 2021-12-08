@@ -1,9 +1,10 @@
 ---
 description: 'A Actions component.'
-labels: ['label1', 'label2', 'label3']
+labels: ['react', 'modal', 'action']
 ---
 
 import { Actions } from './actions';
+import { Button } from '@src200/bit-assesment.ui.button';
 
 ## React Component for rendering text
 
@@ -11,12 +12,8 @@ A basic div that renders some text
 
 ### Component usage
 ```js
-<Actions text="hello from Actions" />
-```
-
-### Using props to customize the text
-
-Modify the text to see it change live:
-```js live
-<Actions text="hello from Actions" />
+<Actions>
+    <Button onClick={void 0}>Cancel</Button>
+    <Button primary onClick={void 0}>Confirm</Button>
+</Actions>
 ```

@@ -4,6 +4,5 @@ import { BasicContent } from './content.composition';
 
 it('should render with the correct text', () => {
   const { getByText } = render(<BasicContent />);
-  const rendered = getByText('hello from Content');
-  expect(rendered).toBeTruthy();
+  expect(getByText('Hello World')).toBeInTheDocument();
 });

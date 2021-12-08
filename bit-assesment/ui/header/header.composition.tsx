@@ -2,5 +2,7 @@ import React from 'react';
 import { Header } from './header';
 
 export const BasicHeader = () => (
-  <Header text="hello from Header" />
+  <Header>
+    <h3>hello from Header</h3>
+  </Header>
 );

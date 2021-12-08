@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { Overlay as ModalBackDrop } from '@src200/bit-assesment.ui.overlay';
-import { ModalContext } from './context';
+import { ModalContext } from '@src200/bit-assesment.hooks.context';
 import styles from './modal.module.scss';
 
 export type ModalProps = {

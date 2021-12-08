@@ -11,7 +11,9 @@ export const BasicModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Modal.Header title="Basic Modal" />
+        <Modal.Header>
+          <h3>Basic Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,7 +38,9 @@ export const CloseModalOnOutsideClick = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} closeOnOutsideClick>
-        <Modal.Header title="Close on Outside Click" />
+        <Modal.Header>
+          <h3>Close on Outside Click</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -61,7 +65,9 @@ export const SmallModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small">
-        <Modal.Header title="Small Modal" />
+        <Modal.Header>
+          <h3>Small Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -86,7 +92,9 @@ export const LargeModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="large">
-        <Modal.Header title="Large Modal" />
+        <Modal.Header>
+          <h3>Large Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -111,7 +119,9 @@ export const NoCloseIconModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} showCloseIcon={false}>
-        <Modal.Header title="No Close Icon Modal" />
+        <Modal.Header>
+          <h3>No Close Icon Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -137,7 +147,9 @@ export const FullScreenModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} fullscreen>
-        <Modal.Header title="Full Screen Modal" />
+        <Modal.Header>
+          <h3>Full Screen Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -161,8 +173,10 @@ export const FloatingSidebarModal = () => {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
-      <Modal className={styles.floatingSideBar} isOpen={isOpen} onClose={() => setIsOpen(false)} fullscreen showCloseIcon>
-        <Modal.Header title="Floating Sidebar Modal" />
+      <Modal className={styles.floatingSideBar} isOpen={isOpen} onClose={() => setIsOpen(false)} fullscreen showCloseIcon position="top-left">
+        <Modal.Header>
+          <h3>Floating Sidebar Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -199,7 +213,9 @@ export const ConfirmationModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <Modal.Header title="Confirmation Modal" />
+        <Modal.Header>
+          <h3>Confirmation Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -224,7 +240,9 @@ export const NoBackdropModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} noBackdrop>
-        <Modal.Header title="No Backdrop Modal" />
+        <Modal.Header>
+          <h3>No Backdrop Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -249,7 +267,9 @@ export const TopLeftModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="top-left">
-        <Modal.Header title="Top Left Modal" />
+        <Modal.Header>
+          <h3>Top Left Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -274,7 +294,9 @@ export const TopRightModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="top-right">
-        <Modal.Header title="Top Right Modal" />
+        <Modal.Header>
+          <h3>Top Right Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -299,7 +321,9 @@ export const BottomLeftModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="bottom-left">
-        <Modal.Header title="Bottom Left Modal" />
+        <Modal.Header>
+          <h3>Bottom Left Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -324,7 +348,9 @@ export const BottomRightModal = () => {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size="small" position="bottom-right">
-        <Modal.Header title="Bottom Right Modal" />
+        <Modal.Header>
+          <h3>Bottom Right Modal</h3>
+        </Modal.Header>
         <Modal.Content>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
